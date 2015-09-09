@@ -19,7 +19,7 @@ class CecaServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('ubublog/ceca');
+		//$this->package('ubublog/ceca');
         AliasLoader::getInstance()->alias('Ceca', 'Ubublog\Ceca\Facades\Ceca');
 	}
 
