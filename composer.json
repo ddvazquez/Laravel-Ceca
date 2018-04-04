@@ -1,6 +1,6 @@
 {
     "name": "neokike/laravel-ceca",
-    "description": "Pasarela de Pago Ceca para Laravel 5",
+    "description": "Pasarela de Pago Ceca para Laravel 5.5",
     "license": "MIT",
     "authors": [
         {
