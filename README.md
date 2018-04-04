@@ -1,10 +1,10 @@
-TPV CECA PARA LARAVEL 4.2
+TPV CECA PARA LARAVEL 5.5
 =========================
 
 Historia
 --------
 
-Viendo que la pasarela de pago para [ceca](https://github.com/ssheduardo/ceca) no tenía un paquete para ser usado comodamente en Laravel 4.2, y poder hacer que sea aún más fácil de usar y sobre todo el proporcionar un granito de arena a la comunidad.
+Viendo que la pasarela de pago para [ceca](https://github.com/ssheduardo/ceca) no tenía un paquete para ser usado comodamente en Laravel 5.5, y poder hacer que sea aún más fácil de usar y sobre todo el proporcionar un granito de arena a la comunidad.
 
 
 Introducción
@@ -16,7 +16,7 @@ Si lo usas en algún proyecto y te fue de utilidad estaré más que contento de 
 
 Requerimientos
 --------------
-Laravel 4.2
+Laravel 5.5
 
 Créditos
 --------
