@@ -30,7 +30,7 @@ Instalación
 
 	"require": {
 	    ...
-        "ubublog/laravel-ceca": "dev-master"
+        "dvazquez/laravel-ceca": "dev-master"
     },
 
 **Paso 2:** Realizar un **composer update** para que nos descargue el paquete
