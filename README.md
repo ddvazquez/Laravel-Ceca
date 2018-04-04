@@ -50,16 +50,17 @@ Uso
 ---
 
 	try{
-		Ceca::setEntorno();
-        Ceca::setMerchantID('xxxxxx');
-        Ceca::setClaveEncriptacion('xxxxxx');
-        Ceca::setAcquirerBIN('xxxxxx');
-        Ceca::setUrlOk('http://www.url.com/respuesta_ok.php');
-        Ceca::setUrlNok('http://www.url.com/respuesta_nok.php');
-        Ceca::setNumOperacion('A00'.date('His'));
-        Ceca::setImporte('43,81');
-        Ceca::setSubmit('pay','Pagar');
-        $form = Ceca::create_form();
+		$ceca = new Ceca;
+		$ceca->setEntorno();
+		$ceca->setMerchantID('xxxxxx');
+		$ceca->setClaveEncriptacion('xxxxxx');
+		$ceca->setAcquirerBIN('xxxxxx');
+		$ceca->setUrlOk('http://www.url.com/respuesta_ok.php');
+		$ceca->setUrlNok('http://www.url.com/respuesta_nok.php');
+		$ceca->setNumOperacion('A00'.date('His'));
+		$ceca->setImporte('43,81');
+		$ceca->setSubmit('pay','Pagar');
+		$form = $ceca->create_form();
 	}
 	catch (Exception $e){
 		echo $e->getMessage();
