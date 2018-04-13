@@ -417,7 +417,35 @@ class Ceca{
         ';
         return $formulario;
     }
+    
+    public function checkTransaction(array $post) {
+        if (empty($post) || empty($post['Firma'])) {
+            throw new Exception('POST data is empty');
+        }
+        $fields = array('MerchantID', 'AcquirerBIN', 'TerminalID', 'Num_operacion', 'Importe', 'TipoMoneda', 'Exponente', 'Referencia');
+        $key = '';
+        foreach ($fields as $field) {
+            if (empty($post[$field])) {
+                throw new Exception(sprintf('Field <strong>%s</strong> is empty and is required to verify transaction', $field));
+            }
+            $key .= $post[$field];
+        }
+        $signature = $this->makeHash($key);
+        if ($signature !== $post['Firma']) {
+            throw new Exception(sprintf('Signature not valid (%s != %s)', $signature, $post['Firma']));
+        }
+        return true;
+    }
 
+    private function makeHash($message) {
+        $message = $this->_clave_encriptacion.$message;
+        if ($this->_cifrado === 'SHA2') {
+            return hash('sha256', $message);
+        }
+
+        return sha1($message);
+    }
+	
     //Utilidades
     //http://stackoverflow.com/a/9111049/444225
     private function priceToSQL($price)
